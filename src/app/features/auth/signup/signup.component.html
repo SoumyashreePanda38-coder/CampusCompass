@@ -1,0 +1,239 @@
+<div class="signup-container">
+
+    <div class="signup-card">
+
+        <div class="header">
+
+            <h1>CampusCompass</h1>
+
+            <p class="tagline">
+                More Than a CGPA.
+            </p>
+
+            <h2>Create Your Account</h2>
+
+        </div>
+
+        <form (ngSubmit)="register()">
+
+            <h3>Personal Information</h3>
+
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" placeholder="Enter full name" [(ngModel)]="user.name" name="name">
+            </div>
+
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" placeholder="Enter email" [(ngModel)]="user.email" name="email">
+            </div>
+
+            <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" placeholder="Enter phone number" [(ngModel)]="user.phone" name="phone">
+            </div>
+
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" placeholder="Create password" [(ngModel)]="user.password" name="password">
+            </div>
+
+            <div class="form-group">
+                <label>Confirm Password</label>
+                <input type="password" placeholder="Confirm password" [(ngModel)]="user.confirmPassword"
+                    name="confirmPassword">
+            </div>
+
+            <h3>Academic Information</h3>
+
+            <div class="form-group">
+                <label>College Name</label>
+                <input type="text" placeholder="Enter college name" [(ngModel)]="user.collegeName" name="collegeName">
+            </div>
+
+            <div class="form-group">
+                <label>Stream</label>
+
+                <select [(ngModel)]="user.stream" name="stream" aria-label="Stream selection">
+
+                    <option>Engineering & Technology</option>
+
+                    <option>Management (MBA/BBA)</option>
+
+                    <option>Commerce</option>
+
+                    <option>Science</option>
+
+                    <option>Arts & Humanities</option>
+
+                    <option>Biotechnology & Life Sciences</option>
+
+                    <option>Government & Public Sector</option>
+
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Branch / Specialization</label>
+                <input type="text" placeholder="CSE / MBA / BBA / Physics etc" [(ngModel)]="user.branch" name="branch">
+            </div>
+
+            <div class="row">
+
+                <div class="form-group">
+                    <label>Current Year</label>
+
+                    <select [(ngModel)]="user.currentYear" name="currentYear" aria-label="Current year selection">
+                        <option>1st Year</option>
+                        <option>2nd Year</option>
+                        <option>3rd Year</option>
+                        <option>4th Year</option>
+                    </select>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="form-group">
+
+                        <label>Graduation Year</label>
+
+                        <select [(ngModel)]="user.graduationYear" name="graduationYear" aria-label="Graduation year selection">
+
+                            <option>2026</option>
+                            <option>2027</option>
+                            <option>2028</option>
+                            <option>2029</option>
+                            <option>2030</option>
+                            <option>2031</option>
+                            <option>2032</option>
+
+                        </select>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Current Semester</label>
+
+                        <select [(ngModel)]="user.semester" name="semester" aria-label="Semester selection">
+
+                            <option>Semester 1</option>
+                            <option>Semester 2</option>
+                            <option>Semester 3</option>
+                            <option>Semester 4</option>
+                            <option>Semester 5</option>
+                            <option>Semester 6</option>
+                            <option>Semester 7</option>
+                            <option>Semester 8</option>
+
+                        </select>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <h3>Career Goal</h3>
+
+            <div class="form-group">
+
+                <label>Select Career Goal</label>
+
+                <select [(ngModel)]="user.careerGoal" name="careerGoal" aria-label="Career goal selection">
+
+                    <!-- Engineering -->
+
+                    <option>Full Stack Developer</option>
+                    <option>Frontend Developer</option>
+                    <option>Backend Developer</option>
+                    <option>Mobile App Developer</option>
+                    <option>Software Engineer</option>
+                    <option>Data Analyst</option>
+                    <option>Data Scientist</option>
+                    <option>Machine Learning Engineer</option>
+                    <option>AI Engineer</option>
+                    <option>Cybersecurity Analyst</option>
+                    <option>Ethical Hacker</option>
+                    <option>Cloud Engineer</option>
+                    <option>DevOps Engineer</option>
+                    <option>UI/UX Designer</option>
+                    <option>Product Manager</option>
+
+                    <!-- Management -->
+
+                    <option>Marketing Manager</option>
+                    <option>Digital Marketing Specialist</option>
+                    <option>SEO Specialist</option>
+                    <option>Sales Manager</option>
+                    <option>Business Analyst</option>
+                    <option>Operations Manager</option>
+                    <option>HR Manager</option>
+                    <option>Financial Analyst</option>
+
+                    <!-- Commerce -->
+
+                    <option>Chartered Accountant (CA)</option>
+                    <option>Company Secretary (CS)</option>
+                    <option>Cost Accountant (CMA)</option>
+                    <option>Tax Consultant</option>
+                    <option>Auditor</option>
+                    <option>Investment Banker</option>
+
+                    <!-- Science -->
+
+                    <option>Research Scientist</option>
+                    <option>Laboratory Scientist</option>
+                    <option>Professor</option>
+                    <option>Environmental Scientist</option>
+                    <option>Statistician</option>
+
+                    <!-- Arts -->
+
+                    <option>Psychologist</option>
+                    <option>Counsellor</option>
+                    <option>Literature Specialist</option>
+                    <option>Journalist</option>
+                    <option>Content Writer</option>
+                    <option>Public Relations Specialist</option>
+
+                    <!-- Biotechnology -->
+
+                    <option>Biotechnologist</option>
+                    <option>Microbiologist</option>
+                    <option>Genetic Engineer</option>
+                    <option>Bioinformatics Analyst</option>
+                    <option>Clinical Research Scientist</option>
+
+                    <!-- Government -->
+
+                    <option>UPSC Civil Services</option>
+                    <option>State PSC</option>
+                    <option>SSC CGL</option>
+                    <option>Bank PO</option>
+                    <option>RBI Grade B</option>
+                    <option>Indian Army</option>
+                    <option>Indian Navy</option>
+                    <option>Indian Air Force</option>
+
+                </select>
+
+            </div>
+            <button type="submit" class="signup-btn">
+
+                Create Account
+
+            </button>
+
+        </form>
+
+        <div class="login-link">
+
+            Already have an account?
+
+            <a routerLink="/login">Login</a>
+
+        </div>
+
+    </div>
+
+</div>

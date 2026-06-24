@@ -1,0 +1,250 @@
+<div class="settings-page">
+
+  <!-- HEADER -->
+
+  <div class="settings-header">
+
+    <h1>Settings</h1>
+
+    <p>
+      Manage your account, preferences,
+      notifications and security.
+    </p>
+
+  </div>
+
+  <!-- SETTINGS GRID -->
+
+  <div class="settings-grid">
+
+    <!-- ACCOUNT SETTINGS -->
+
+    <div class="settings-card">
+
+      <div class="card-icon">👤</div>
+
+      <h2>Account Settings</h2>
+
+      <p>
+        Update your profile information and account details.
+      </p>
+
+      <div class="setting-actions">
+
+        <button
+          routerLink="/profile/personal">
+
+          Edit Profile
+
+        </button>
+
+        <button
+          class="setting-btn"
+          (click)="togglePasswordForm()">
+
+          Change Password
+
+        </button>
+
+      </div>
+
+      <!-- PASSWORD FORM -->
+
+      <div
+        class="password-form"
+        *ngIf="showPasswordForm">
+
+        <h3>Change Password</h3>
+
+        <input
+          type="password"
+          placeholder="Current Password"
+          [(ngModel)]="currentPassword">
+
+        <input
+          type="password"
+          placeholder="New Password"
+          [(ngModel)]="newPassword">
+
+        <input
+          type="password"
+          placeholder="Confirm New Password"
+          [(ngModel)]="confirmPassword">
+
+        <button
+          class="save-btn"
+          (click)="changePassword()">
+
+          Update Password
+
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- APPEARANCE -->
+
+    <div class="settings-card">
+
+      <div class="card-icon">🎨</div>
+
+      <h2>Appearance</h2>
+
+      <p>
+        Customize the look and feel of CampusCompass.
+      </p>
+
+      <div class="theme-options">
+
+        <label>
+
+          <input
+            type="radio"
+            name="theme"
+            checked>
+
+          Light Theme
+
+        </label>
+
+        <label>
+
+          <input
+            type="radio"
+            name="theme">
+
+          Dark Theme
+
+        </label>
+
+      </div>
+
+    </div>
+
+    <!-- NOTIFICATIONS -->
+
+    <div class="settings-card">
+
+      <div class="card-icon">🔔</div>
+
+      <h2>Notifications & Reminders</h2>
+
+      <p>
+        Control alerts and productivity reminders.
+      </p>
+
+      <div class="toggle-group">
+
+        <div class="toggle-item">
+
+          <span>Upcoming Deadlines</span>
+
+          <label class="switch">
+
+            <input
+              type="checkbox"
+              checked>
+
+            <span class="slider"></span>
+
+          </label>
+
+        </div>
+
+        <div class="toggle-item">
+
+          <span>Assignments</span>
+
+          <label class="switch">
+
+            <input
+              type="checkbox"
+              checked>
+
+            <span class="slider"></span>
+
+          </label>
+
+        </div>
+
+        <div class="toggle-item">
+
+          <span>Planner Tasks</span>
+
+          <label class="switch">
+
+            <input
+              type="checkbox"
+              checked>
+
+            <span class="slider"></span>
+
+          </label>
+
+        </div>
+
+        <div class="toggle-item">
+
+          <span>Placement Reminders</span>
+
+          <label class="switch">
+
+            <input
+              type="checkbox">
+
+            <span class="slider"></span>
+
+          </label>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- SECURITY -->
+
+    <div class="settings-card">
+
+      <div class="card-icon">🔒</div>
+
+      <h2>Security</h2>
+
+      <p>
+        Secure your CampusCompass account.
+      </p>
+
+      <div class="setting-actions">
+
+        <button class="security-btn">
+
+          Two-Factor Authentication
+
+          <span>(Coming Soon)</span>
+
+        </button>
+
+        <button class="security-btn">
+
+          Login Activity
+
+          <span>(Coming Soon)</span>
+
+        </button>
+
+        <button
+          class="logout-btn"
+          (click)="logout()">
+
+          Logout
+
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

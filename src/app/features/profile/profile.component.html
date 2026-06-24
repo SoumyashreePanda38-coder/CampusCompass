@@ -1,0 +1,99 @@
+<div class="profile-container">
+
+  <!-- HEADER -->
+
+  <div class="profile-header">
+
+    <div class="profile-avatar">
+
+      <div class="avatar-circle">
+
+        {{ user.name?.charAt(0) }}
+
+      </div>
+
+    </div>
+
+    <div class="profile-info">
+
+      <h1>{{ user.name }}</h1>
+
+      <p>{{ user.branch }}</p>
+
+      <span class="career-badge">
+
+        {{ user.careerGoal }}
+
+      </span>
+
+    </div>
+
+  </div>
+
+  <!-- PROFILE SECTIONS -->
+
+  <div class="profile-grid">
+
+    <!-- PERSONAL -->
+
+    <div
+      class="profile-card"
+      routerLink="/profile/personal">
+
+      <h3>👤 Personal Information</h3>
+
+      <p>
+        Manage your personal details,
+        contact information and profile.
+      </p>
+
+    </div>
+
+    <!-- ACADEMIC -->
+
+    <div
+      class="profile-card"
+      routerLink="/profile/academic">
+
+      <h3>📚 Academic Information</h3>
+
+      <p>
+        View and edit stream,
+        semester and college details.
+      </p>
+
+    </div>
+
+    <!-- CAREER -->
+
+    <div
+      class="profile-card"
+      routerLink="/profile/career-goal">
+
+      <h3>🎯 Career Goal</h3>
+
+      <p>
+        Update your career path and
+        personalize CampusCompass.
+      </p>
+
+    </div>
+
+    <!-- SETTINGS -->
+
+    <div
+      class="profile-card"
+      routerLink="/profile/settings">
+
+      <h3>⚙️ Settings</h3>
+
+      <p>
+        Manage account preferences,
+        security and logout.
+      </p>
+
+    </div>
+
+  </div>
+
+</div>

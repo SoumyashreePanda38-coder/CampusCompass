@@ -1,0 +1,191 @@
+/* ==========================
+   PAGE
+========================== */
+
+.profile-container{
+
+  min-height:100vh;
+
+  padding:40px;
+
+  background:
+  linear-gradient(
+    180deg,
+    #F8FAFC,
+    #F4F4FF,
+    #ECFDF5
+  );
+
+  font-family:'Poppins',sans-serif;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.profile-header{
+
+  background:white;
+
+  border-radius:30px;
+
+  padding:35px;
+
+  display:flex;
+
+  align-items:center;
+
+  gap:30px;
+
+  margin-bottom:35px;
+
+  border:1px solid #E5E7EB;
+
+  box-shadow:
+  0 8px 20px rgba(0,0,0,.05);
+}
+
+/* ==========================
+   AVATAR
+========================== */
+
+.avatar-circle{
+
+  width:120px;
+
+  height:120px;
+
+  border-radius:50%;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  font-size:3rem;
+
+  font-weight:700;
+
+  color:white;
+
+  background:
+  linear-gradient(
+    135deg,
+    #7C3AED,
+    #10B981
+  );
+}
+
+/* ==========================
+   INFO
+========================== */
+
+.profile-info h1{
+
+  font-size:2.2rem;
+
+  color:#1E293B;
+
+  margin-bottom:10px;
+}
+
+.profile-info p{
+
+  color:#64748B;
+
+  margin-bottom:15px;
+}
+
+.career-badge{
+
+  padding:10px 18px;
+
+  border-radius:30px;
+
+  background:
+  rgba(16,185,129,.12);
+
+  color:#059669;
+
+  font-weight:600;
+}
+
+/* ==========================
+   GRID
+========================== */
+
+.profile-grid{
+
+  display:grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(280px,1fr));
+
+  gap:25px;
+}
+
+/* ==========================
+   CARDS
+========================== */
+
+.profile-card{
+
+  background:white;
+
+  border-radius:24px;
+
+  padding:30px;
+
+  cursor:pointer;
+
+  border:1px solid #E5E7EB;
+
+  transition:.3s ease;
+
+  box-shadow:
+  0 5px 15px rgba(0,0,0,.04);
+}
+
+.profile-card:hover{
+
+  transform:translateY(-6px);
+
+  border-color:#7C3AED;
+
+  box-shadow:
+  0 15px 30px rgba(124,58,237,.15);
+}
+
+.profile-card h3{
+
+  color:#7C3AED;
+
+  margin-bottom:15px;
+}
+
+.profile-card p{
+
+  color:#64748B;
+
+  line-height:1.7;
+}
+
+/* ==========================
+   MOBILE
+========================== */
+
+@media(max-width:768px){
+
+  .profile-header{
+
+    flex-direction:column;
+
+    text-align:center;
+  }
+
+  .profile-container{
+
+    padding:20px;
+  }
+}

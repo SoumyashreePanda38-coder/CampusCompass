@@ -1,0 +1,239 @@
+<div class="dashboard-container">
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo-section">
+
+            <h2>CampusCompass</h2>
+
+            <span>More Than a CGPA.</span>
+
+        </div>
+
+        <div class="nav-links">
+
+            <a routerLink="/dashboard">Home</a>
+
+            <a routerLink="/academics">Academics</a>
+
+            <a routerLink="/skills">Skills</a>
+
+            <a routerLink="/planner">Planner</a>
+
+            <a routerLink="/career">Career</a>
+
+            <a routerLink="/profile">Profile</a>
+
+        </div>
+
+    </nav>
+
+    <!-- WELCOME BANNER -->
+
+    <section class="welcome-banner">
+
+        <div>
+
+            <h1>
+                Welcome Back, {{user.name}} 👋
+            </h1>
+
+            <p>
+
+                {{user.branch}}
+                |
+                {{user.semester}}
+
+            </p>
+
+            <span class="career-goal">
+
+                Career Goal:
+                {{user.careerGoal}}
+
+            </span>
+
+        </div>
+
+    </section>
+
+    <!-- DASHBOARD GRID -->
+
+    <div class="dashboard-grid">
+
+        <!-- UPCOMING DEADLINES -->
+
+        <div class="card">
+
+            <h3>Upcoming Deadlines</h3>
+
+            <div class="empty-state">
+
+                <p>No deadlines added yet.</p>
+
+                <button class="action-btn" routerLink="/planner">
+
+                    Add Deadline
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- TODAY'S MISSION -->
+
+        <div class="card">
+
+            <h3>Today's Mission</h3>
+
+            <div *ngIf="tasks.length === 0" class="empty-state">
+
+                <p>No tasks scheduled for today.</p>
+
+                <button class="action-btn" routerLink="/planner">
+
+                    Add Task
+
+                </button>
+
+            </div>
+
+            <div *ngIf="tasks.length > 0">
+
+                <p>
+
+                    {{tasks.length}}
+                    Tasks Available
+
+                </p>
+
+            </div>
+        </div>
+
+        <!-- SKILL PROGRESS -->
+
+        <div class="card">
+
+            <h3>Skill Progress</h3>
+
+            <div *ngIf="skills.length === 0" class="empty-state">
+
+                <p>No skills added yet.</p>
+
+                <button class="action-btn" routerLink="/skills">
+
+                    Add Skill
+
+                </button>
+
+            </div>
+
+            <div *ngIf="skills.length > 0">
+
+                <p>
+
+                    {{skills.length}}
+                    skills tracked
+
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- QUICK ACTIONS -->
+
+        <div class="card">
+
+            <h3>Quick Actions</h3>
+
+            <button class="action-btn" routerLink="/academics">
+
+                Add Subject
+
+            </button>
+
+            <button class="action-btn" routerLink="/skills">
+
+                Add Skill
+
+            </button>
+
+            <button class="action-btn" routerLink="/planner">
+
+                Add Task
+
+            </button>
+
+        </div>
+
+        <!-- PLANNER SNAPSHOT -->
+
+        <div class="card">
+
+            <h3>Planner Snapshot</h3>
+
+            <div *ngIf="tasks.length === 0" class="empty-state">
+
+                <p>No planner data available.</p>
+
+                <button class="action-btn" routerLink="/planner">
+
+                    Open Planner
+
+                </button>
+
+            </div>
+
+            <div *ngIf="tasks.length > 0">
+
+                <p>
+
+                    {{tasks.length}}
+                    Tasks Planned
+
+                </p>
+
+            </div>
+        </div>
+
+        <!-- PLACEMENT READINESS -->
+
+        <div class="card">
+
+            <h3>Placement Readiness</h3>
+
+            <p>
+                Complete your profile and projects
+                to calculate readiness.
+            </p>
+
+            <button class="action-btn">
+                Setup Career Profile
+            </button>
+
+
+        </div>
+
+        <!-- CAMPUS COMPASS SCORE -->
+
+        <div class="card score-card">
+
+            <h3>CampusCompass Score</h3>
+
+
+
+            <p>
+
+                More Than a CGPA.
+
+            </p>
+            <p>Coming Soon!</p>
+        </div>
+
+    </div>
+
+</div>
